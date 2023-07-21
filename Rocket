@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rocket Takeoff</title>
+
+  <style type="text/css">
+
+.rocket-container {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#rocket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 2s ease;
+    cursor: pointer;
+}
+  </style>
+
+</head>
+<body>
+    <div class="rocket-container">
+        <img id="rocket" src="rocket.png" alt="Rocket">
+    
+<script>
+
+     // Function to make the rocket take off
+function takeOff() {
+    const rocketElement = document.getElementById('rocket');
+    rocketElement.style.bottom = '100%'; // Move the rocket upwards (you can adjust the value to control the height)
+
+    // Reset the rockets position after the animation is finished
+    setTimeout(function () {
+        rocketElement.style.bottom = '0';
+    }, 2000); // Time for the rocket to reach the top (in milliseconds)
+}
+
+const rocketImage = document.getElementById('rocket');
+rocketImage.addEventListener('click', takeOff);
+
+</script>
+
+
+</body>
+</html>
