@@ -25,7 +25,7 @@
 </head>
 <body>
     <div class="rocket-container">
-        <img id="rocket" src="rocket.png" alt="Rocket">
+        <img id="rocket" src="./rocket.png" alt="Rocket">
     
 <script>
 
